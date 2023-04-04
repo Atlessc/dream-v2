@@ -1,73 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Glitch&family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&display=swap');
 body {
-  background-color: #0b0b0e;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6b6b6b;
+    color: white;
+    
+    font-family: 'Bebas Neue', cursive;
+
 }
 
 main {
- display: grid;
- place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
 }
 
 h1 {
-  font-family: 'Rubik Microbe', cursive;
-  font-weight: 400;
-  font-size: 5rem;
+    font-family: 'Lily Script One', serif;
+    font-weight: 400;
+    font-size: 4rem;
+    text-align: center;
+    color: #9ffcdf;
+    text-shadow: -4px 4px rgb(114, 166, 148);
 }
 
 #result {
-  aspect-ratio: 1/1;
-  max-width: 512px;
-  width: 100%;
-  background: #3a3a43;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 768px;
+    width: 768px;
+    font-size: 3rem;
+    background: #b1b1b1;
+    text-align: center;
+    padding: 30px;
+    color: #6c6c96;
+    border: 5px solid #41415b;
+    box-shadow: -20px 20px #494964;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
 
+img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 512px;
-  margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 512px;
+    margin-top: 2rem;
+}
+
+label {
+    font-size: 2rem;
+    color: #9ffcdf;
+    text-shadow: -3px 3px rgb(114, 166, 148);
 }
 
 textarea {
-  width: 100%;
-  height: 100px;
-  margin: 10px 0;
-  font-size: 1.5rem;
+    padding: 5px;
+    width: 110%;
+    height: 100px;
+    margin: 10px 0 30px 0;
+    font-size: 1rem;
+    border: 5px solid #41415b;
+    box-shadow: -10px 14px #494964;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 button {
-  width: 100%;
-  height: 50px;
-  background-color: #1b1b1e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 50px;
+    width: 85%;
+    height: 80px;
+    background-color: #6c6c96;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    border: #4c4c69 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 5px solid #41415b;
+    box-shadow: -4px 7px #494964;
 }
 
 button:hover {
-  background-color: #2b2b2e;
+    background-color: #2b2b2e;
+}
+
+/* the button:active should be inset the same as the box shadow, the box shadow should be null, and make this an animation named "button-anim" lasting 450ms */
+button:active {
+    background-color: #2b2b2e;
+    box-shadow: none;
+    animation: button-anim 450ms;
+}
+
+@keyframes button-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 
 .spinner {
+
   animation: spin 1s linear infinite;
   display: inline-block;
 }
