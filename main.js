@@ -1,6 +1,11 @@
 import './style.css';
+import * as dotenv from 'dotenv';
 
 const form = document.querySelector('form');
+
+dotenv.config();
+
+const SERVER = process.env.DREAM_SERVER;
 
 // 1. Listen for the form to be submitted and prevent it from being sent
 form.addEventListener('submit', async (e) => {
@@ -11,7 +16,7 @@ form.addEventListener('submit', async (e) => {
   const data = new FormData(form);
 
   // 3. Send that text to our API server
-  const response = await fetch('http://localhost:8080/dream', {
+  const response = await fetch(`${SERVER}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
