@@ -26,6 +26,12 @@ form.addEventListener('submit', async (e) => {
     }),
   });
 
+  if (response.status === 500) {
+    alert('Something went wrong');
+    hideSpinner();
+    return;
+    }
+
   // 4. Convert the response to JSON
   const { image } = await response.json();
 
