@@ -17,6 +17,10 @@ main {
     justify-content: center;
     width: 90%;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
 
 h1 {
     font-family: 'Lily Script One', serif;
@@ -102,6 +106,8 @@ button {
     border: 5px solid #41415b;
     box-shadow: -4px 7px #494964;
 }
+
+
 
 button:hover {
     background-color: #2b2b2e;
